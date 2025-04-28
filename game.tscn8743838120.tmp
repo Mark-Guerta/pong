@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4lo81vida3rn"]
+
+[ext_resource type="PackedScene" uid="uid://ok6nneeg7h5f" path="res://Entities/playerPaddle/player_paddle.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://2jxcm27cc3oj" path="res://Entities/ball/ball.tscn" id="1_e2o6t"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Ball" parent="." instance=ExtResource("1_e2o6t")]
+position = Vector2(448, 128)
+scale = Vector2(-0.329517, -0.322369)
+
+[node name="playerPaddle" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(64, 128)

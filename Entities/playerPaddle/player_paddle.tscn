@@ -1,19 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://ok6nneeg7h5f"]
 
-[ext_resource type="Script" uid="uid://dwen04cuswxfn" path="res://playerPaddle/player_paddle.gd" id="1_8qndg"]
-[ext_resource type="Texture2D" uid="uid://cxp02ceyv1b2l" path="res://rect1.png" id="1_pdgly"]
+[ext_resource type="Script" uid="uid://dwen04cuswxfn" path="res://Entities/playerPaddle/player_paddle.gd" id="1_8qndg"]
+[ext_resource type="Texture2D" uid="uid://bk67jyihfvwut" path="res://pongPaddle.svg" id="2_8qndg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n2oiu"]
 size = Vector2(16, 184)
 
 [node name="playerPaddle" type="CharacterBody2D"]
+position = Vector2(8, 0)
 script = ExtResource("1_8qndg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(144, 124.297)
+position = Vector2(1.81899e-12, 3.63798e-12)
 scale = Vector2(0.158416, 0.40487)
-texture = ExtResource("1_pdgly")
+texture = ExtResource("2_8qndg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(144, 124)
 shape = SubResource("RectangleShape2D_n2oiu")

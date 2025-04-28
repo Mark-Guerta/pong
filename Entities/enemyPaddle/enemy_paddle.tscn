@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgkphnn4w6jl3"]
+
+[ext_resource type="Script" uid="uid://vcc7f3kstvqm" path="res://Entities/enemyPaddle/enemy_paddle.gd" id="1_sydrw"]
+[ext_resource type="Texture2D" uid="uid://bk67jyihfvwut" path="res://pongPaddle.svg" id="2_l7sh6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n2oiu"]
+size = Vector2(16, 184)
+
+[node name="enemyPaddle" type="CharacterBody2D"]
+position = Vector2(8, 0)
+script = ExtResource("1_sydrw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.81899e-12, 3.63798e-12)
+scale = Vector2(0.158416, 0.40487)
+texture = ExtResource("2_l7sh6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_n2oiu")

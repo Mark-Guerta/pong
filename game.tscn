@@ -1,7 +1,48 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4lo81vida3rn"]
+[gd_scene load_steps=8 format=3 uid="uid://b4lo81vida3rn"]
 
-[ext_resource type="PackedScene" uid="uid://ok6nneeg7h5f" path="res://playerPaddle/player_paddle.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://ok6nneeg7h5f" path="res://Entities/playerPaddle/player_paddle.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://2jxcm27cc3oj" path="res://Entities/ball/ball.tscn" id="1_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://bgkphnn4w6jl3" path="res://Entities/enemyPaddle/enemy_paddle.tscn" id="3_feb5d"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_e2o6t"]
+b = Vector2(0, 648)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_feb5d"]
+a = Vector2(248, -8)
+b = Vector2(248, 640)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_fc0e3"]
+b = Vector2(1152, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7jktm"]
+a = Vector2(-40, 328)
+b = Vector2(1112, 328)
 
 [node name="Game" type="Node2D"]
 
+[node name="Ball" parent="." instance=ExtResource("1_e2o6t")]
+position = Vector2(448, 320)
+scale = Vector2(-0.329517, -0.322369)
+
 [node name="playerPaddle" parent="." instance=ExtResource("1_80nbo")]
+position = Vector2(64, 320)
+motion_mode = 1
+
+[node name="enemyPaddle" parent="." instance=ExtResource("3_feb5d")]
+position = Vector2(1088, 320)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_e2o6t")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(904, 8)
+shape = SubResource("SegmentShape2D_feb5d")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_fc0e3")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(40, 320)
+shape = SubResource("SegmentShape2D_7jktm")

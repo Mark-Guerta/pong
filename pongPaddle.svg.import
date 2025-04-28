@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxp02ceyv1b2l"
-path="res://.godot/imported/pongPaddle.png-b978a818d65d72bb9b56d65e589b72a1.ctex"
+uid="uid://bk67jyihfvwut"
+path="res://.godot/imported/pongPaddle.svg-75c5220f5a45f40db4a3d04156e6715b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pongPaddle.png"
-dest_files=["res://.godot/imported/pongPaddle.png-b978a818d65d72bb9b56d65e589b72a1.ctex"]
+source_file="res://pongPaddle.svg"
+dest_files=["res://.godot/imported/pongPaddle.svg-75c5220f5a45f40db4a3d04156e6715b.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false
